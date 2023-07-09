@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main2.css') }}">
+
+  </head>
+  <body>
+    <h1 class="caloriematetitle">CalorieMate Sign Up Page</h1>
+    <h2 class="logintext">Enter Email:</h2>
+    <h2 class="passwordtext">Enter Password:</h2>
+     <form method="post" action="/submit2">
+
+      <input type="text" name="text2" class="email" placeholder="Enter Email">
+      <input type="password" name="password2" class="password" placeholder="Enter Password">
+      <button type="submit" class="submit">Submit</button>
+
+
+    </form>
+    {% if message %}
+    <div class="fail-text">{{ message }}</div>
+    {% endif %}
+  </body>
+</html>

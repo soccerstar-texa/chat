@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main3.css') }}">
+
+</head>
+<body>
+<header>
+    <h1>{{ html }} CalorieMate Dashboard</h1>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Daily Intake</a>
+</nav>
+<h1 class="firsttext">Search For Food To Add To Daily Intake:</h1>
+<form action="/search" method="get">
+    <input type="text" name="query" class="query" placeholder="Enter food to add to daily intake">
+    <button type="submit" class="submit">Search</button>
+</form>
+<p class="data">{{ message }}</p>
+
+<img src= "{{ url }}"  alt="no image" width="100" height="100">
+</body>
+</html>
